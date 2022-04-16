@@ -6,6 +6,7 @@
 body {
     margin: 0px;
     font-family: Arial, sans-serif;
+    background-color: #009FFF;
 }
 header, section {
     padding: 20px;
@@ -14,8 +15,20 @@ p, li {
     line-height: 1.5em;
 }
 
+#tutorials {
+    background: linear-gradient(to right, #8a2387, #e94057, #f27121);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#homework {
+    background: linear-gradient(to right, #f7ff00, #db36a4);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
 #inspiration {
-    background-color: #F0F0F0;
+    background: linear-gradient(to right, #b24592, #f15f79);
     padding-top: 40px;
     padding-bottom: 40px;
 }
