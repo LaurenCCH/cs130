@@ -1,29 +1,30 @@
 .container {
     height: 100vh;
     width: 100vw;
-    /*margin: 2rem auto;*/
+    margin: auto;
     display: grid;
-    grid-template-areas: "header header"
-                         "left right"
-                         "footer footer";
-    grid-template-rows: 1fr 3fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header header"
+                         "left center right";
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 1fr 1fr;
  }
  .cell-1 {
     background: #6300A7;
     grid-area: header;
+    text-align: center;
+    vertical-align: middle;
  }
  .cell-2 {
-    background: #A62098;
+    background: #8707A6;
     grid-area: left;
  }
  .cell-3 {
     background: #D5546E;
-    grid-area: right;
+    grid-area: middle;
  }
  .cell-4 {
     background: #F58C46;
-    grid-area: footer;
+    grid-area: right;
  }
  .cell {
     color: white;
