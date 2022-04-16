@@ -4,7 +4,7 @@
     margin: auto;
     display: grid;
     grid-template-areas: "header header header"
-                         "left center right";
+                         "left mid right";
     grid-template-rows: 1fr 4fr;
     grid-template-columns: 1fr 1fr 1fr;
  }
@@ -19,7 +19,7 @@
  }
  .cell-3 {
     background: #D5546E;
-    grid-area: middle;
+    grid-area: mid;
  }
  .cell-4 {
     background: #F58C46;
