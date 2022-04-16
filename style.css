@@ -9,20 +9,20 @@
     grid-template-columns: 1fr 1fr 1fr;
  }
  .cell-1 {
-    background: #6300A7;
+    background: #845ec2;
     grid-area: header;
 
  }
  .cell-2 {
-    background: #8707A6;
+    background: #d65db1;
     grid-area: left;
  }
  .cell-3 {
-    background: #D5546E;
+    background: #ff6f91;
     grid-area: mid;
  }
  .cell-4 {
-    background: #F58C46;
+    background: #ff9671;
     grid-area: right;
  }
  .cell {
