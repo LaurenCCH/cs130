@@ -11,8 +11,7 @@
  .cell-1 {
     background: #6300A7;
     grid-area: header;
-    text-align: center;
-    vertical-align: middle;
+
  }
  .cell-2 {
     background: #8707A6;
