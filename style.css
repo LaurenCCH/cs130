@@ -1,34 +1,33 @@
-/* You're welcome to change any of this! */
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0px;
-    font-family: Arial, sans-serif;
-    background-color: #009FFF;
-}
-header, section {
-    padding: 20px;
-}
-p, li {
-    line-height: 1.5em;
-}
-
-#tutorials {
-    background: linear-gradient(to right, #8a2387, #e94057, #f27121);
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-#homework {
-    background: linear-gradient(to right, #f7ff00, #db36a4);
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-#inspiration {
-    background: linear-gradient(to right, #b24592, #f15f79);
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
+.container {
+    height: 100vh;
+    width: 100vw;
+    /*margin: 2rem auto;*/
+    display: grid;
+    grid-template-areas: "header header"
+                         "left right"
+                         "footer footer";
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr;
+ }
+ .cell-1 {
+    background: deepskyblue;
+    grid-area: header;
+ }
+ .cell-2 {
+    background: orangered;
+    grid-area: left;
+ }
+ .cell-3 {
+    background: gold;
+    grid-area: right;
+ }
+ .cell-4 {
+    background: blueviolet;
+    grid-area: footer;
+ }
+ .cell {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    /*padding: 4rem;*/
+ }
