@@ -1,0 +1,325 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    color: #fff;
+}
+a, a:hover, a:visited, a:active { 
+    color: #fff;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**********/
+/* Layout */
+/**********/
+aside, footer, header, nav, section {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 100px;
+    grid-template-areas:
+       "left main"
+       "bottom bottom";
+    height: 100vh;
+}
+
+
+
+main {
+    background: #111;
+    grid-area: main;
+    min-height: calc(350px);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    z-index: 3;
+}
+
+
+
+footer {
+    background: #222;
+    grid-area: bottom;
+}
+
+
+/***************************/
+/* Accessories & Florishes */
+/***************************/
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    min-height: 30px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+}
+
+/***************************/
+/* Part A: Left Navigation */
+/***************************/
+
+aside {
+    background-color: #000;
+    grid-area: left;
+    display: flex;
+    row-gap: 20px;
+    padding-left: 20px;
+    flex-direction: column;
+    border-width: 5px;
+
+}
+
+.fa-headphones-alt{
+    padding-bottom: 2px;
+    grid-area: left;
+    border-left: solid 2px;
+    padding-left: 10px;
+    border-color: #1cbc54;
+    padding-top: 2px;
+    
+}
+
+.fa-home{
+    padding-bottom: 2px;
+    grid-area: left;
+    border-left: solid 2px;
+    padding-left: 10px;
+    border-color: black;
+    padding-top: 2px;
+}
+
+.fa-search{
+    padding-bottom: 2px;
+    grid-area: left;
+    border-left: solid 2px;
+    padding-left: 10px;
+    border-color: black;
+    padding-top: 2px;
+}
+
+
+
+aside a:hover {
+    text-shadow: 0 0 3px white;
+}
+
+
+/********************************/
+/* Part B: Header & Nav Styling */
+/********************************/
+
+.artist{
+    border-bottom: solid 2px;
+    padding-bottom: 2px;
+    border-color: #1cbc54;
+}
+
+header {
+    background: #111;
+    display: float;
+    position: sticky;
+    width: calc(100vw - 250px);
+    left: 250px;
+    flex-direction: row;
+    padding-left: 68%;
+    padding-top: 20px;
+    column-gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 0;
+    line-height: 0;
+    padding-right: 20px;
+    max-width: 100%;
+    margin-top: 10px;
+}
+ 
+#profile{
+    border-radius: 25px;
+    background-color: rgb(50, 50, 50);
+    padding-left: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 35px;
+    justify-content: space-between;
+    position: sticky;
+}
+ 
+#upgrade{
+    border-radius: 25px;
+    border: 2px solid white;
+    padding-left: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 35px;
+    position: sticky;
+}
+
+
+#upgrade:hover{
+    background-color: #4b4b4b;
+}
+
+#profile:hover{
+    background-color: #4b4b4b;
+}
+
+
+nav {
+    margin-top: 50px;
+    display: flex;
+    column-gap: 40px;
+    flex-direction: row;
+    padding-left: 40px;
+    padding-bottom: 35px;
+    font-size: 13px;
+}
+
+nav a:hover{
+    border-bottom: solid 2px;
+    padding-bottom: 2px;
+    border-color: #1cbc54;
+
+}
+
+/*************************/
+/* Part C: Artists Panel */
+/*************************/
+button {
+    position: relative;
+    display: none;
+    border: 1px solid #1cbc54;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    color: white;
+    background-color: #1cbc54;
+    left: 72%;
+    top: -18px;
+    height: 45px;
+    font-size: 20px; 
+    margin-right: 5px;
+ }
+
+#featured-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 3vh;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    line-height: 0;
+    
+}
+.artist-card{
+    position: relative;
+    flex: 0 0 18%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    background-color: rgb(50, 50, 50);
+    border-radius: 25px;
+    padding: 20px;
+    flex-shrink: 1;
+    line-height: 0;
+    gap: 3vh;
+    justify-content: center;
+    align-items: center;
+    max-height: 42.399vh;
+  }
+
+.artist-card:hover button{
+
+ display:inline-block;
+  }
+
+img {
+    border-radius: 50%;
+    max-height:100%;
+    height:auto;
+    max-width:100%;
+    width:auto;
+  }
+
+.card-footer{
+    font-size: .7em;
+    padding-bottom: 3em;
+    padding-top: 1em;
+    line-height: .5em;
+}
+
+
+/**************************/
+/* Part D: Responsive UIs */
+/**************************/
+
+
+@media only screen and (max-width: 1000px) {
+    article {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 3vh;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 1;
+        line-height: 0;
+    }
+
+    .artist-card{
+        flex: 0 0 25%;
+      }
+    .card-footer{
+        font-size: 1.0vw;
+        padding-bottom: 1vw;
+        padding-top: 1vw;
+        line-height: .5vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    article {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 3vh;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 1;
+        line-height: 0;
+    }
+    main{
+        width: 100%;
+        position:absolute;
+    }
+
+    .artist-card{
+        flex: 0 0 40%;
+      }
+    .card-footer{
+        font-size: 1.0vw;
+        padding-bottom: 1vw;
+        padding-top: 1vw;
+        line-height: .5vw;
+    }
+
+    aside{
+        display: none;
+        position: absolute;
+    }
+}
+
+
+
