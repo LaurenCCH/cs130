@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js" defer></script>
+  
+<head>
+    <title>
+        Find Suitable Recipes
+    </title>
+</head>
+  
+<body>
+    <h2>Step 1: Select Your Dietary Restrictions</h2>
+    <h3>Click on the button to open the dropdown menu and <br> 
+        use the checkboxes to select the relevant options for <br> 
+        your dietary resrictions (click button to close menu)</h3>
+  
+
+    <fieldset style="width:0px">
+        <legend>Select options</legend>
+    <form>
+        <div class="multipleSelection">
+            <div class="selectBox" 
+                onclick="showCheckboxes()">
+                <select aria-label = "diet dropdown">
+                    <option>Select options</option>
+                </select>
+                <div class="overSelect"></div>
+            </div>
+  
+            <div id="checkBoxes">
+                <label for="anti_inflam">
+                    <input type="checkbox" id="anti_inflam" name = "diet"/>
+                    Anti-Inflammatory
+                </label>
+                <label for="dairy">
+                    <input type="checkbox" id="dairy" name = "diet"/>
+                    Dairy-Free
+                </label>
+                <label for="egg">
+                    <input type="checkbox" id="egg" name = "diet"/>
+                    Egg-Free
+                </label>
+                <label for="gastroparesis">
+                    <input type="checkbox" id="gastroparesis" name = "diet"/>
+                    Gastroparesis-friendly
+                </label>
+                <label for="gluten">
+                    <input type="checkbox" id="gluten" name = "diet"/>
+                    Gluten-Free
+                </label>
+                <label for="keto">
+                    <input type="checkbox" id="keto" name = "diet"/>
+                    Ketogenic
+                </label>
+                <label for="lacto_veg">
+                    <input type="checkbox" id="lacto_veg" name = "diet"/>
+                    Lacto-Vegatarian
+                </label>
+                <label for="low_fodmap">
+                    <input type="checkbox" id="low_fodmap" name = "diet"/>
+                    Low FODMAP
+                </label>
+                <label for="low_gi">
+                    <input type="checkbox" id="low_gi" name = "diet"/>
+                    Low Glycemic Index
+                </label>
+                <label for="low_hist">
+                    <input type="checkbox" id="low_hist" name = "diet"/>
+                    Low Histamine
+                </label>
+                <label for="maoi">
+                    <input type="checkbox" id="maoi" name = "diet"/>
+                    Low-Tyramine (for MAOIs)
+                </label>
+                <label for="nightshade">
+                    <input type="checkbox" id="nightshade" name = "diet"/>
+                    Nightshade-Free
+                </label>
+                <label for="ovo_veg">
+                    <input type="checkbox" id="ovo_veg" name = "diet"/>
+                    Ovo-Vegatarian
+                </label>
+                <label for="paleo">
+                    <input type="checkbox" id="paleo" name = "diet"/>
+                    Paleo
+                </label>
+                <label for="peanut">
+                    <input type="checkbox" id="peanut" name = "diet"/>
+                    Peanut-Free
+                </label>
+                <label for="pescatarian">
+                    <input type="checkbox" id="pescatarian" name = "diet"/>
+                    Pescatarian
+                </label>
+                <label for="seafood">
+                    <input type="checkbox" id="seafood" name = "diet"/>
+                    Seafood-Free
+                </label>
+                <label for="sesame">
+                    <input type="checkbox" id="sesame" name = "diet"/>
+                    Sesame-Free
+                </label>
+                <label for="soy">
+                    <input type="checkbox" id="soy" name = "diet"/>
+                    Soy-Free
+                </label>
+                <label for="sulfite">
+                    <input type="checkbox" id="sulfite" name = "diet"/>
+                    Sulfite-Free
+                </label>
+                <label for="tree_nut">
+                    <input type="checkbox" id="tree_nut" name = "diet"/>
+                    Tree Nut-Free
+                </label>
+                <label for="vegan">
+                    <input type="checkbox" id="vegan" name = "diet"/>
+                    Vegan
+                </label>
+                <label for="vegetarian">
+                    <input type="checkbox" id="vegetarian" name = "diet"/>
+                    Vegetarian
+                </label>
+                <label for="wheat">
+                    <input type="checkbox" id="wheat" name = "diet"/>
+                    Wheat-Free
+                </label>
+                
+
+            </div>
+        </div>
+    </form>
+    </fieldset>
+
+    <form>
+        <h2>  
+            Step 2) Input Individual Ingredients
+        </h2>
+        <h3> Input a list of ingredients (with items separated <br> by commas) that you want to exclude,
+            e.g., if you have <br>sensory aversions not covered in the drop-down menu</h3>
+       </h4> Ingredients to Exclude:
+        <input id="user_input" 
+          type="text" 
+          value="" 
+          aria-label = "exclude ingredients"/>
+        <br>
+        <br>
+        <button id="submit" type="button" onclick = "for_api(get_sep_lists())">
+            Enter
+        </button>
+
+    </form>
+    
+
+</body>
+  
+</html>
