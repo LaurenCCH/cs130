@@ -34,10 +34,9 @@ const getTracks = (term) => {
         }
         counter = 0;
         for (const track of tracks){
-            // document.querySelector('#tracks').innerHTML += `<p>${track.name}</p>`;
             document.querySelector('#tracks').innerHTML += `
             <button class="track-item preview" data-preview-track="${track.preview_url}" onclick = "handleTrackClick(event)">
-                <img src = "${track.album.image_url}">
+                <img src = "${track.album.image_url}" alt = "Album cover image for ${track.album.name}" aria-label = "Play ${track.name}">
                 <i class = "fas play-track fa-play" aria-hidden = "true"> </i>
                 <div class = "label">
                     <h2> ${track.name} </h2>
@@ -77,7 +76,7 @@ const getAlbums = (term) => {
             document.querySelector('#albums').innerHTML += `
                 <section class="album-card" id = "${album.id}">
                 <div>
-                    <img src="${album.image_url}">
+                    <img src="${album.image_url}" alt = "Album cover image for ${album.name}">
                     <h2> ${album.name} </h2>
                     <div class="footer">
                         <a href="${album.spotify_url}" target="_blank">
@@ -138,9 +137,9 @@ const getArtistHTML = (data) => {
 
 const handleTrackClick = (ev) => {
     const previewUrl = ev.currentTarget.getAttribute('data-preview-track');
-    console.log(previewUrl);
     audioPlayer.setAudioFile(previewUrl);
     audioPlayer.play();
+    document.querySelector('#current-track').innerHTML = ev.currentTarget.innerHTML;
 }
 
 document.querySelector('#search').onkeyup = (ev) => {
