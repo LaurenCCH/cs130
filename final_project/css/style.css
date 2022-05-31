@@ -1,10 +1,10 @@
-h1 {
-            color: green;
-        }
+/* h2 {
+            color: #22402B;
+        } */
   
         .multipleSelection {
             width: 400px;
-            background-color: #BCC2C1;
+            background-color: #B3E0C1;
         }
   
         .selectBox {
@@ -27,7 +27,6 @@ h1 {
   
         #checkBoxes {
             display: none;
-            border: 1px #8DF5E4 solid;
         }
   
         #checkBoxes label {
@@ -35,5 +34,72 @@ h1 {
         }
   
         #checkBoxes label:hover {
-            background-color: #4F615E;
+            background-color: #B3E0C1;
         }
+
+        body {background-color: #C1D5F5;
+            width: 99%;
+        /* color: #22402B; */
+        }
+
+        #recipes {
+            display: flex;
+            width: 99%;
+            align-items: center;
+            justify-items: center;
+            /* padding: 5%; */
+            flex-direction: row;
+            flex-wrap: wrap;
+            overflow-wrap: break-word;
+            float: center;
+            justify-content: space-around;
+        }
+
+        #submit_search {
+            font-size: 24px;
+            align-items: center;
+        }
+
+        .recipe-card {
+            background-color: #B3E0C1;
+            border-radius: 25px;
+            width: 27%;
+            height: 60vh;
+            margin-bottom: 5vh;
+            margin-top: 5vh;
+
+            /* margin: 2%; */
+            
+        }
+
+        .recipe_ingreds {
+            position: relative;
+            text-align: center;
+        }
+
+        img {
+            width: 80%;
+            border-radius: 25px;
+            align-items: center;
+            justify-items: center;
+            position: relative;
+            margin-top: 10%;
+            margin-left: 10%;
+            margin-right: 10%;
+            border: 3% #C1D5F5;
+        }
+
+        #recipe_link {
+            align-items: center;
+            justify-items: center;
+            position: relative;
+            text-align: center;
+            margin-left: 10%;
+            margin-right: 10%;
+
+        }
+
+        #step_1 {
+            width: 40%;
+        }
+

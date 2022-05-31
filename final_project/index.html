@@ -13,10 +13,11 @@
 </head>
   
 <body>
+    <section id = "step_1">
     <h2>Step 1: Select Your Dietary Restrictions</h2>
     <h3>Click on the button to open the dropdown menu and <br> 
         use the checkboxes to select the relevant options for <br> 
-        your dietary resrictions (click button to close menu)</h3>
+        your dietary resrictions (click menu again to close)</h3>
   
 
     <fieldset style="width:0px">
@@ -40,6 +41,10 @@
                     <input type="checkbox" id="dairy" name = "diet"/>
                     Dairy-Free
                 </label>
+                <label for="DASH">
+                    <input type="checkbox" id="DASH" name = "diet"/>
+                    DASH
+                </label>
                 <label for="egg">
                     <input type="checkbox" id="egg" name = "diet"/>
                     Egg-Free
@@ -56,10 +61,6 @@
                     <input type="checkbox" id="keto" name = "diet"/>
                     Ketogenic
                 </label>
-                <label for="lacto_veg">
-                    <input type="checkbox" id="lacto_veg" name = "diet"/>
-                    Lacto-Vegatarian
-                </label>
                 <label for="low_fodmap">
                     <input type="checkbox" id="low_fodmap" name = "diet"/>
                     Low FODMAP
@@ -72,17 +73,25 @@
                     <input type="checkbox" id="low_hist" name = "diet"/>
                     Low Histamine
                 </label>
+                <label for="low_pot">
+                    <input type="checkbox" id="low_pot" name = "diet"/>
+                    Low Potassium
+                </label>
+                <label for="low_sugar">
+                    <input type="checkbox" id="low_sugar" name = "diet"/>
+                    Low Sugar
+                </label>
                 <label for="maoi">
                     <input type="checkbox" id="maoi" name = "diet"/>
                     Low-Tyramine (for MAOIs)
                 </label>
+                <label for="mediterranean">
+                    <input type="checkbox" id="mediterranean" name = "diet"/>
+                    Mediterranean
+                </label>
                 <label for="nightshade">
                     <input type="checkbox" id="nightshade" name = "diet"/>
                     Nightshade-Free
-                </label>
-                <label for="ovo_veg">
-                    <input type="checkbox" id="ovo_veg" name = "diet"/>
-                    Ovo-Vegatarian
                 </label>
                 <label for="paleo">
                     <input type="checkbox" id="paleo" name = "diet"/>
@@ -96,9 +105,9 @@
                     <input type="checkbox" id="pescatarian" name = "diet"/>
                     Pescatarian
                 </label>
-                <label for="seafood">
-                    <input type="checkbox" id="seafood" name = "diet"/>
-                    Seafood-Free
+                <label for="shellfish">
+                    <input type="checkbox" id="shellfish" name = "diet"/>
+                    Shellfish-Free
                 </label>
                 <label for="sesame">
                     <input type="checkbox" id="sesame" name = "diet"/>
@@ -134,10 +143,11 @@
         </div>
     </form>
     </fieldset>
+</section>
 
     <form>
         <h2>  
-            Step 2) Input Individual Ingredients
+            Step 2) Input Individual Ingredients (optional)
         </h2>
         <h3> Input a list of ingredients (with items separated <br> by commas) that you want to exclude,
             e.g., if you have <br>sensory aversions not covered in the drop-down menu</h3>
@@ -146,13 +156,72 @@
           type="text" 
           value="" 
           aria-label = "exclude ingredients"/>
+<!--         <button id="submit_search" type="button" onclick = "for_api(get_sep_lists())">
+            Enter
+        </button> -->
         <br>
         <br>
-        <button id="submit" type="button" onclick = "for_api(get_sep_lists())">
+    </form>
+
+    <section id="restrict">
+
+    </section>
+
+    <section id = "choose_time">
+        <h2>
+            Step 3) Choose Cook + Prep Time (optional)
+        </h2>
+        <h3>
+            Enter your preferred cook + prep time in minutes with numeric characters.  <br>
+            You can either give a range (e.g. 20-40), a minimum (e.g., 20+), or a maximum(e.g., 50)
+        </h3>
+        <input id="recipe_time" 
+          type="text" 
+          value="" 
+          aria-label = "cook plus prep time in minutes"/>
+    </section>
+
+    <section id = "search">
+        <h2>
+            Step 4) Submit Your Choices
+        </h2>
+        <button id="submit_search" type="button" onclick = "for_api(get_sep_lists())">
+            Enter
+        </button>
+    </section>
+
+<!--     <form>
+        <h2>  
+            Step 3) Input Search Term
+        </h2>
+        <h3> Input a search term, e.g. soup, breakfast, muffins, etc.</h3>
+       </h4> Search Term:
+        <input id="search_term" 
+          type="text" 
+          value="" 
+          aria-label = "search term"/>
+        <br>
+        <br>
+        <button id="submit_search" type="button" onclick = "for_api(get_sep_lists())">
             Enter
         </button>
 
-    </form>
+    </form> -->
+
+    <section id = "recipes_title">
+        <h2>
+            Step 5) View recipes
+        </h2>
+        <h3>
+            The recipes presented here are randomly selected from the <br>
+            pool of recipes that fit your parameters. If you don't like the <br>
+            options you see, just click "Enter" again to get a new set
+        </h3>
+        <section id = "recipes" class = "recipe_card">
+
+        </section>
+    </section>
+   
     
 
 </body>
