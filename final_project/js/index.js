@@ -34,10 +34,10 @@ document.getElementById('nightshade').value = ["banana peppers", "datil", "eggpl
 "sweet peppers", "yellow bell peppers", "red bell peppers","green bell peppers","orange bell peppers", "roasted red bell pepper", "thai peppers", "tomatillos", "garden huckleberry", "goji berries", "wolfberries", "gooseberries", 
 "ground cherries", "cape gooseberries", "jerusalem cherries", "pepino", "sunberry", "wonderberries", "tamarillo", "tomatoes"]
 
-document.getElementById('low_hist').value = ["cheese", "yogurt", "sour cream", "buttermilk", "kefir", "sauerkraut",
+/* document.getElementById('low_hist').value = ["cheese", "yogurt", "sour cream", "buttermilk", "kefir", "sauerkraut",
 "kimchi", "pickles", "kombucha", "sausage", "salami", "wine", "beer", "champagne", "alcohol", "tempeh", "miso", "soy sauce", 
 "natto", "sourdough bread", "tomatoes", "eggplant", "spinach", "sardines", "canned tuna", "canned salmon", "vinegar", 
-"ketchup", "legumes", "bacon"]
+"ketchup", "legumes", "bacon"] */
 
 /* document.getElementById('paleo').value = ["legumes", "beans", "lentils", "peanuts", "peas", "dairy", "sugar", "salt", "potatoes", "bread", 
 "rice", "pasta", "whole grains", "alcohol", "coffee", "vegetable oil", "canola oil", "sunflower oil", "gluten"]

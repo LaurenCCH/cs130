@@ -64,7 +64,7 @@
             background-color: #B3E0C1;
             border-radius: 25px;
             width: 27%;
-            height: 60vh;
+            /*height: 60vh;*/
             margin-bottom: 5vh;
             margin-top: 5vh;
 
@@ -86,7 +86,6 @@
             margin-top: 10%;
             margin-left: 10%;
             margin-right: 10%;
-            border: 3% #C1D5F5;
         }
 
         #recipe_link {
@@ -96,6 +95,8 @@
             text-align: center;
             margin-left: 10%;
             margin-right: 10%;
+            margin-bottom: 12%;
+
 
         }
 
