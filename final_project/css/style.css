@@ -1,19 +1,19 @@
-/* h2 {
-            color: #22402B;
-        } */
-  
-        .multipleSelection {
-            width: 400px;
+h4 {
+    font-size: 1.1em;
+}
+
+.multipleSelection {
+            width: 38vw;
             background-color: #B3E0C1;
         }
   
         .selectBox {
             position: relative;
-			width: 100%;
+            width: 38vw;
         }
   
         .selectBox select {
-            width: 100%;
+            width: 38vw;
             font-weight: bold;
         }
   
@@ -45,8 +45,8 @@
         #recipes {
             display: flex;
             width: 99%;
-            align-items: center;
-            justify-items: center;
+            /* align-items: center;
+            justify-items: center; */
             /* padding: 5%; */
             flex-direction: row;
             flex-wrap: wrap;
@@ -67,6 +67,9 @@
             /*height: 60vh;*/
             margin-bottom: 5vh;
             margin-top: 5vh;
+/*             min-height: 600px;
+            max-height: 600px; */
+
 
             /* margin: 2%; */
             
@@ -86,6 +89,7 @@
             margin-top: 10%;
             margin-left: 10%;
             margin-right: 10%;
+
         }
 
         #recipe_link {
@@ -96,11 +100,104 @@
             margin-left: 10%;
             margin-right: 10%;
             margin-bottom: 12%;
-
-
+            font-size: 1.25vw;
         }
 
-        #step_1 {
-            width: 40%;
-        }
+#initial_steps {
+    margin-left: 4%;
+    width: 60%;
 
+}
+
+
+
+#restrict {
+    font-weight: normal;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    #initial_steps {
+        margin-left: 4%;
+        width: 80%;
+        
+    }
+
+    .multipleSelection {
+        width: 70vw;
+        background-color: #B3E0C1;
+    }
+
+    .selectBox {
+        position: relative;
+        width: 70vw;
+    }
+
+    .selectBox select {
+        width: 70vw;
+        font-weight: bold;
+    }
+
+    .recipe-card {
+        background-color: #B3E0C1;
+        border-radius: 25px;
+        width: 40%;
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+    }
+
+    #recipe_link {
+        align-items: center;
+        justify-items: center;
+        position: relative;
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 12%;
+        font-size: 2.1vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #initial_steps {
+        margin-left: 4%;
+        width: 85%;
+        
+    }
+
+    .multipleSelection {
+        width: 75vw;
+        background-color: #B3E0C1;
+    }
+
+    .selectBox {
+        position: relative;
+        width: 75vw;
+    }
+
+    .selectBox select {
+        width: 75vw;
+        font-weight: bold;
+    }
+
+    .recipe-card {
+        background-color: #B3E0C1;
+        border-radius: 25px;
+        width: 80%;
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+        
+    }
+
+    #recipe_link {
+        align-items: center;
+        justify-items: center;
+        position: relative;
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 12%;
+        font-size: 5vw;
+    }
+}

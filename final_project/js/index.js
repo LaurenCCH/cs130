@@ -122,7 +122,7 @@ get_sep_lists = function(){
   chose_health_print_0 = chose_health_print_0.replace(/,/g, ", ");
   
   //document.body.append("Excluded Ingredients: " + " " + all_exclude + ".  " + "Selected Diets: " + " " + chose_health);
-  document.querySelector('#restrict').innerHTML = "<strong> Excluded Ingredients: </strong>" + " " + ingreds_print + "<br> <br>" + "<strong> Selected Diets: </strong>" + " " + chose_health_print_0;
+  document.querySelector('#restrict').innerHTML = "Excluded Ingredients: " + " " + ingreds_print + "<br> <br>" + "Selected Diets: " + " " + chose_health_print_0;
   sep_groups = [all_exclude, chose_health];
   console.log(chose_health)
   //return(sep_groups);
@@ -181,7 +181,7 @@ for_api = function(){
 
         document.querySelector('#recipes').innerHTML += `
             <section class="recipe-card">
-                <img src="${recipes.hits[i]["recipe"].image}">
+                <img src="${recipes.hits[i]["recipe"].image}" alt = "Picture for ${recipes.hits[i]["recipe"].label} recipe">
                 <h3 id = "recipe_link"> <a href="${recipes.hits[i]["recipe"].url}" target="_blank"> ${recipes.hits[i]["recipe"].label}</a> </h3>
 
         </section>
