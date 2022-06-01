@@ -12,11 +12,14 @@
     </title>
 </head>
   
-<body>
+<main>
+    <div id = "initial_steps">
     <section id = "step_1">
-    <h2>Step 1: Select Your Dietary Restrictions</h2>
-    <h3>Click on the button to open the dropdown menu and <br> 
-        use the checkboxes to select the relevant options for <br> 
+    <h2>
+        Step 1: Select Your Dietary Restrictions
+    </h2>
+    <h3>Click on the button to open the dropdown menu and
+        use the checkboxes to select the relevant options for
         your dietary resrictions (click menu again to close)</h3>
   
 
@@ -143,11 +146,12 @@
 
     <form>
         <h2>  
-            Step 2) Input Individual Ingredients (optional)
+            Step 2: Input Individual Ingredients (optional)
         </h2>
-        <h3> Input a list of ingredients (with items separated <br> by commas) that you want to exclude,
-            e.g., if you have <br>sensory aversions not covered in the drop-down menu</h3>
-       </h4> Ingredients to Exclude:
+        <h3> Input a list of ingredients (with items separated by commas) that you want to exclude,
+            e.g., if you have sensory aversions not covered in the drop-down menu</h3>
+        <div id = "ingred_ex">
+       <h4> Ingredients to Exclude: </h4>
         <input id="user_input" 
           type="text" 
           value="" 
@@ -155,20 +159,22 @@
 <!--         <button id="submit_search" type="button" onclick = "for_api(get_sep_lists())">
             Enter
         </button> -->
+    
         <br>
         <br>
     </form>
 
-    <section id="restrict">
+    <h4 id="restrict">
 
-    </section>
+    </h4>
+</div>
 
     <section id = "choose_time">
         <h2>
-            Step 3) Choose Cook + Prep Time (optional)
+            Step 3: Choose Cook + Prep Time (optional)
         </h2>
         <h3>
-            Enter your preferred cook + prep time in minutes with numeric characters.  <br>
+            Enter your preferred cook + prep time in minutes with numeric characters.
             You can either give a range (e.g. 20-40), a minimum (e.g., 20+), or a maximum(e.g., 50)
         </h3>
         <input id="recipe_time" 
@@ -179,18 +185,19 @@
 
     <section id = "search">
         <h2>
-            Step 4) Submit Your Choices
+            Step 4: Submit Your Choices
         </h2>
-        <button id="submit_search" type="button" onclick = "for_api(get_sep_lists())">
+        <button id="submit_search" type="submit" onclick = "for_api(get_sep_lists())">
             Enter
         </button>
     </section>
 
+
 <!--     <form>
-        <h2>  
+        <h3>  
             Step 3) Input Search Term
-        </h2>
-        <h3> Input a search term, e.g. soup, breakfast, muffins, etc.</h3>
+        </h3>
+        <h4> Input a search term, e.g. soup, breakfast, muffins, etc.</h4>
        </h4> Search Term:
         <input id="search_term" 
           type="text" 
@@ -206,13 +213,15 @@
 
     <section id = "recipes_title">
         <h2>
-            Step 5) View recipes
+            Step 5: View recipes
         </h2>
         <h3>
-            The recipes presented here are randomly selected from the <br>
-            pool of recipes that fit your parameters. If you don't like the <br>
+            The recipes presented here are randomly selected from the
+            pool of recipes that fit your parameters. If you don't like the
             options you see, just click "Enter" again to get a new set
         </h3>
+
+    </div>
         <section id = "recipes" class = "recipe_card">
 
         </section>
@@ -220,6 +229,6 @@
    
     
 
-</body>
+</main>
   
 </html>
