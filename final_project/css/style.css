@@ -1,3 +1,7 @@
+#restrict {
+    font-size: 1.1em;
+}
+
 h4 {
     font-size: 1.1em;
 }
@@ -119,6 +123,34 @@ h1 {
     font-weight: normal;
 }
 
+#disclaimer {
+position: absolute; 
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #B3E0C1;
+  display: flex;
+  width: 20%;
+  padding: 2.5%;
+  border-radius: 25px;
+  margin: 1%;
+  font-size: 1.1em;
+} 
+
+/* #disclaimer {
+    position: relative; 
+    z-index: 1;
+    top: 0;
+    width: 50%;
+    background-color: #B3E0C1;
+    display: flex;
+    padding: 2.5%;
+    border-radius: 25px;
+    margin: 0 auto;
+    width: 90%;
+    font-size: 1.1em;
+} */
+
 
 
 @media only screen and (max-width: 1000px) {
@@ -161,6 +193,19 @@ h1 {
         margin-bottom: 12%;
         font-size: 2.1vw;
     }
+
+    #disclaimer {
+        position: relative; 
+        z-index: 1;
+        bottom: 0;
+        width: 50%;
+          background-color: #B3E0C1;
+          display: flex;
+          padding: 2.5%;
+          border-radius: 25px;
+          margin: 4%;
+          font-size: 1.1em;
+        }
 }
 
 @media only screen and (max-width: 600px) {
@@ -204,4 +249,18 @@ h1 {
         margin-bottom: 12%;
         font-size: 5vw;
     }
+
+    #disclaimer {
+        position: relative; 
+        z-index: 1;
+        bottom: 0;
+        width: 50%;
+          background-color: #B3E0C1;
+          display: flex;
+          padding: 2.5%;
+          border-radius: 25px;
+          margin: 0 auto;
+          width: 90%;
+          font-size: 1.1em;
+        }
 }

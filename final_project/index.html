@@ -72,10 +72,6 @@
                     <input type="checkbox" id="low_fodmap" name = "diet"/>
                     Low FODMAP
                 </label>
-                <label for="low_gi">
-                    <input type="checkbox" id="low_gi" name = "diet"/>
-                    Low Glycemic Index
-                </label>
                 <label for="low_pot">
                     <input type="checkbox" id="low_pot" name = "diet"/>
                     Low Potassium
@@ -83,10 +79,6 @@
                 <label for="low_sugar">
                     <input type="checkbox" id="low_sugar" name = "diet"/>
                     Low Sugar
-                </label>
-                <label for="maoi">
-                    <input type="checkbox" id="maoi" name = "diet"/>
-                    Low-Tyramine (for MAOIs)
                 </label>
                 <label for="mediterranean">
                     <input type="checkbox" id="mediterranean" name = "diet"/>
@@ -168,9 +160,9 @@
         <br>
     </form>
 
-    <h4 id="restrict" alt = "Restricted ingredients will go here">
+    <div id="restrict" alt = "Restricted ingredients will go here">
 
-    </h4>
+    </div>
 </div>
 
     <section id = "choose_time">
@@ -230,6 +222,14 @@
 
         </section>
     </section>
+
+    <aside id = "disclaimer">
+        Please note that this API has many limitations.
+        There is a chance that one or more recipes will still
+        have one or more of the ingredients you chose to exclude.
+        This site is provided for your conveneince and does not
+        constitute or substitute professional medical advice.
+    </aside>
    
     
 
