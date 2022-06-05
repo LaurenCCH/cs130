@@ -28,11 +28,6 @@ document.getElementById('nightshade').value = ["banana peppers", "datil", "eggpl
 "sweet peppers", "yellow bell peppers", "red bell peppers","green bell peppers","orange bell peppers", "roasted red bell pepper", "thai peppers", "tomatillos", "garden huckleberry", "goji berries", "wolfberries", "gooseberries", 
 "ground cherries", "cape gooseberries", "jerusalem cherries", "pepino", "sunberry", "wonderberries", "tamarillo", "tomatoes"]
 
-document.getElementById('gastroparesis').value = ["legumes", "black beans", "pinto beans", "kidney beans", "corn", "beans", 
-"chickpeas", "lentils", "peas", "peanuts", "navy beans", "alfalfa sprouts", "sunflower seeds", "fennel seeds", "broccoli",
-"cauliflower", "cheese", "heavy cream", "pumpkin seeds", "oats", "oatmeal", "popcorn", "bacon", "sausage", "baloney",
-"mayonnaise", "lard"]
-
 document.getElementById('dairy').value = ["dairy-free"]
 document.getElementById('egg').value = ["egg-free"]
 document.getElementById('gluten').value = ["gluten-free"]
@@ -68,12 +63,6 @@ get_sep_lists = function(){
   if (document.querySelector("#anti_inflam").checked){
     chose_health.push("low-sugar");
     chose_health_print.push("anti-inflammatory");
-  }
-
-  if (document.querySelector("#gastroparesis").checked){
-    chose_health.push("low-sugar");
-    chose_health.push("tree_nut");
-    chose_health_print.push("gastroparesis-friendly");
   }
         $.each($('input[type="checkbox"]:checked'), function(){ 
           current_val = $(this).val()
