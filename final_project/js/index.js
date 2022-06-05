@@ -23,12 +23,6 @@ document.getElementById('anti_inflam').value = ["sausage", "bacon", "pepperoni",
 "rice", "white pasta", "shortening",
 "lard", "margarine", "sunflower oil", "vegetable oil", "corn syrup", "avocado oil"]
 
-/* document.getElementById('low_fodmap').value = ["artichoke", "asparagus", "cauliflower", "garlic", "peas", 
-"mushrooms", "onion", "sugar snap peas", "apples", "apple juice", "cherries", "dried fruit", "mango",
-  "nectarines", "peaches", "pears", "plums", "watermelon", "dairy", "soy", "legumes",
-  "wheat bread", "rye bread", "barley bread", "corn syrup", "honey", "cashews", "pistachios",
-"beans", "lentils", "apricot", "blackberries", "dates", "grapefruit", "leeks", "shallots", "rum"] */
-
 document.getElementById('nightshade').value = ["banana peppers", "datil", "eggplant", "hot peppers",
 "chili peppers", "jalapenos", "habaneros", "red pepper", "cayenne pepper", "paprika", "pimentos", "potatoes",
 "sweet peppers", "yellow bell peppers", "red bell peppers","green bell peppers","orange bell peppers", "roasted red bell pepper", "thai peppers", "tomatillos", "garden huckleberry", "goji berries", "wolfberries", "gooseberries", 
@@ -39,15 +33,6 @@ document.getElementById('gastroparesis').value = ["legumes", "black beans", "pin
 "cauliflower", "cheese", "heavy cream", "pumpkin seeds", "oats", "oatmeal", "popcorn", "bacon", "sausage", "baloney",
 "mayonnaise", "lard"]
 
-
-/* document.getElementById('low_hist').value = ["cheese", "yogurt", "sour cream", "buttermilk", "kefir", "sauerkraut",
-"kimchi", "pickles", "kombucha", "sausage", "salami", "wine", "beer", "champagne", "alcohol", "tempeh", "miso", "soy sauce", 
-"natto", "sourdough bread", "tomatoes", "eggplant", "spinach", "sardines", "canned tuna", "canned salmon", "vinegar", 
-"ketchup", "legumes", "bacon"] */
-
-/* document.getElementById('paleo').value = ["legumes", "beans", "lentils", "peanuts", "peas", "dairy", "sugar", "salt", "potatoes", "bread", 
-"rice", "pasta", "whole grains", "alcohol", "coffee", "vegetable oil", "canola oil", "sunflower oil", "gluten"]
- */
 document.getElementById('dairy').value = ["dairy-free"]
 document.getElementById('egg').value = ["egg-free"]
 document.getElementById('gluten').value = ["gluten-free"]
@@ -68,10 +53,6 @@ document.getElementById('mediterranean').value = ["Mediterranean"];
 document.getElementById('keto').value = ["keto-friendly"];
 document.getElementById('paleo').value = ["paleo"];
 document.getElementById('pescatarian').value = ["pescatarian"];
-
-
-//const allergens = ["dairy", "egg", "eggs", "gluten", "peanut", "seafood", "sesame", "soy", "sulfite", "tree nut", "wheat"];
-//const spec_diets = ["pescatarian", "vegetarian", "vegan", "lacto_veg", "ovo_veg"];
 
 const health_allergens = ["dairy-free", "DASH", "egg-free", "fodmap-free", "gluten-free", "keto-friendly", 
 "kidney-friendly", "kosher", "low-potassium", "low-sugar", "Mediterranean", "paleo", "peanut-free", "pescatarian", 
@@ -115,9 +96,7 @@ get_sep_lists = function(){
       continue;
     }
   }
-/*   if(chose_health != [""]){
-    chose_health.shift();
-  } */
+
   chose_health = chose_health.filter(e =>  e);
   chose_health_print = chose_health_print.filter(e =>  e);
   all_exclude = all_exclude.filter( function( el ) {
@@ -128,22 +107,18 @@ get_sep_lists = function(){
   ingreds_print = ingreds_print.toString();
   ingreds_print = ingreds_print.replace(/,/g, ", ");
 
-
   chose_health_print_0 = chose_health_print;
   chose_health_print_0 = chose_health_print_0.toString();
   chose_health_print_0 = chose_health_print_0.replace(/,/g, ", ");
   
-  //document.body.append("Excluded Ingredients: " + " " + all_exclude + ".  " + "Selected Diets: " + " " + chose_health);
   document.querySelector('#restrict').innerHTML = "Excluded Ingredients: " + " " + ingreds_print + "<br> <br>" + "Selected Diets: " + " " + chose_health_print_0;
   sep_groups = [all_exclude, chose_health];
   console.log(chose_health)
-  //return(sep_groups);
 }
 
 for_api = function(){
   console.log(sep_groups)
-  //let search_term = $('#search_term').val();
-  //console.log(search_term);
+
   document.querySelector('#recipes').innerHTML = "";
     console.log("about to fetch!");
     current_term = "https://api.edamam.com/api/recipes/v2?type=public&q=&app_id=55761331&app_key=543aa3893099e2958b51ec7a135202fd&random=true"
@@ -183,9 +158,7 @@ for_api = function(){
       for (ingred of recipes.hits[i]["recipe"].ingredients){
         ingred_list.push(ingred["text"])
       }
-      /* if(ingred_list != [""]){
-        ingred_list.shift();
-      } */
+
       ingred_list = ingred_list.filter(e =>  e);
       
       ingred_list = ingred_list.toString();
@@ -203,9 +176,6 @@ for_api = function(){
 
 }
 
-/*Ingredient footer:  <div class = "recipe_ingreds">
-                  ${ingred_list}
-                </div> */
 
 
 
